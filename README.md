@@ -100,13 +100,14 @@ github-repository-analyzer-ai/
 │   ├── index.html
 │   ├── style.css
 │   ├── script.js
-│   ├── repository.html
-│   └── repository.js
+│   ├── files.html
+│   └── files.js
+|   └── files.css
 │
 ├── backend/
 │   ├── main.py
 │   ├── requirements.txt
-│   └── .env
+│   └── test.py
 │
 ├── .gitignore
 └── README.md
@@ -125,11 +126,11 @@ Make sure you have installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-cd YOUR_REPOSITORY
+git clone https://github.com/Santhosh2006kumar/GitHub-Repository-Analyzer-AI.git
+cd GitHub-Repository-Analyzer-AI
 ```
 
-Replace the URL with your actual GitHub repository URL.
+
 
 ### 2. Set Up the Backend
 
@@ -139,14 +140,6 @@ Navigate to the backend directory:
 cd backend
 ```
 
-Create and activate a virtual environment.
-
-**Windows:**
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
 
 Install the project dependencies:
 
@@ -170,6 +163,11 @@ From the backend directory, run:
 
 ```bash
 uvicorn main:app --reload
+```
+or 
+
+```bash
+python -m uvicorn main:app --reload
 ```
 
 The backend will usually be available at:
