@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Files</title>
+    <link rel="stylesheet" href="files.css">
+</head>
+<body>
+    <main class="files-page">
+        <div id="blAIbtn">
+            <a id="backLink" class="back-link">
+                ← Back to repositories
+            </a>
+            <!-- AI Analysis Button -->
+            <button id="analyzeAIButton" type="button">
+                ✨ Analyze with AI
+            </button>
+        </div>
+
+        <h1 id="repoTitle">Repository Files</h1>
+
+        <!-- Two-column layout container -->
+        <div class="content-layout">
+            <!-- Left Side: File Explorer -->
+            <section class="files-section">
+                <p id="fileStatus" role="status">Loading files...</p>
+                <div id="fileList" class="file-list"></div>
+            </section>
+
+            <!-- Right Side: AI Analysis -->
+            <section id="aiAnalysisSection" hidden>
+                <h2>AI Repository Analysis</h2>
+                <p id="aiAnalysisStatus" role="status"></p>
+                <div id="aiAnalysisResult"></div>
+            </section>
+        </div>
+    </main>
+
+    <script src="files.js"></script>
+</body>
+</html>

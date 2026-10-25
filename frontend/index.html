@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Analyzer AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <h1 id="heading1">GITHUB REPOSITORY ANALYZER AI</h1>
+    <p id="para1">Analyzes GitHub profiles and repositories using AI.</p>
+    <div class="search-box">
+        <input type="text" placeholder="Enter your Github username" id="githubUsername">
+        <button id="analyzeButton">Analyze Profile</button>
+    </div>
+    <p id="status" role="status"></p>
+
+    <!-- FEATURE 1 -->
+
+    <section id="profileCard" class="profile-card" hidden>
+        <img src="" alt="GitHub profile avatar" id="avatar">
+        
+        <h2 id="name"></h2>
+        <p id="username"></p>
+        <p id="bio"></p>
+
+        <div class="stats">
+            <p>Followers: <strong id="followers"></strong></p>
+            <p>Following: <strong id="following"></strong></p>
+            <p>Repository count: <strong id="repositories"></strong></p>
+        </div>
+
+        <strong id="accountType"></strong>
+        <a href="" id="profileLink" target="_blank">View GitHub Profile</a>
+    </section>
+
+    <!-- FEATURE 3 -->
+     <!-- Repository Statistics Section -->
+    <section
+        id="repositoryStatsSection"
+        class="repository-stats-section"
+        hidden
+    >
+        <h2>
+            <i class="fa-solid fa-chart-simple"></i>
+            Repository Statistics
+        </h2>
+
+        <p id="repositoryStatsStatus"></p>
+
+        <div class="repository-stats-grid">
+
+            <!-- Total Repositories -->
+            <div class="stat-card">
+                <div class="stat-icon repositories-icon">
+                    <i class="fa-solid fa-folder-open"></i>
+                </div>
+
+                <h3>Total Repositories</h3>
+                <p id="totalRepositories">0</p>
+            </div>
+
+            <!-- Total Stars -->
+            <div class="stat-card">
+                <div class="stat-icon stars-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <h3>Total Stars</h3>
+                <p id="totalStars">0</p>
+            </div>
+
+            <!-- Most-used Language -->
+            <div class="stat-card">
+                <div class="stat-icon language-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>Most-used Language</h3>
+                <p id="mostUsedLanguage">-</p>
+            </div>
+
+            <!-- Most-starred Repository -->
+            <div class="stat-card">
+                <div class="stat-icon top-repo-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+
+                <h3>Most-starred Repository</h3>
+                <p id="mostStarredRepo">-</p>
+
+                <p class="repo-star-count">
+                    <i class="fa-solid fa-star"></i>
+                    <span id="mostStarredRepoStars">Stars: 0</span>
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FEATURE 2 -->
+
+    <section id="repositoriesSection" class="repositories-section" hidden>
+        <h2>Public Repositories</h2>
+        <p id="repositoryStatus"></p>
+        <div id="repositoryList" class="repository-list"></div>
+    </section>
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
