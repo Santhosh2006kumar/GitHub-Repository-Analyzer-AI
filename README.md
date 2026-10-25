@@ -53,12 +53,41 @@ Use AI to analyze a selected repository and generate:
 
 ## 🏗️ Project Architecture
 
-The application follows a frontend-backend architecture.
+The application uses a frontend-backend architecture that integrates GitHub's REST API with an AI-powered repository analysis workflow.
 
-- **Frontend:** HTML, CSS, and JavaScript provide the interface and communicate with the backend using HTTP requests.
-- **Backend:** FastAPI handles API requests, retrieves GitHub data, and coordinates AI analysis.
-- **GitHub Integration:** The GitHub REST API supplies public profile and repository information.
-- **AI Integration:** LangChain connects the analysis workflow to Google Gemini to generate repository insights.
+```mermaid
+flowchart TD
+    A["👤 User"] --> B["🌐 Frontend<br/>HTML · CSS · JavaScript"]
+
+    B -->|"HTTP Requests"| C["⚡ FastAPI Backend"]
+
+    C --> D["🐙 GitHub REST API"]
+    D -->|"Profile · Repositories · Files"| C
+
+    C --> E["🤖 AI Analysis Service<br/>LangChain + Google Gemini"]
+    E -->|"Summary · Tech Stack · Structure · Suggestions"| C
+
+    C -->|"JSON Responses"| B
+    B --> F["📊 Display Results<br/>Profile · Statistics · Repository Explorer"]
+    B --> G["✨ Display AI Insights"]
+
+    style A fill:#1e293b,stroke:#94a3b8,color:#ffffff
+    style B fill:#0c4a6e,stroke:#38bdf8,color:#ffffff
+    style C fill:#1d4ed8,stroke:#60a5fa,color:#ffffff
+    style D fill:#14532d,stroke:#4ade80,color:#ffffff
+    style E fill:#581c87,stroke:#c084fc,color:#ffffff
+    style F fill:#164e63,stroke:#22d3ee,color:#ffffff
+    style G fill:#4c1d95,stroke:#a78bfa,color:#ffffff
+```
+
+### Architecture Components
+
+- **Frontend:** Collects the GitHub username, displays profile and repository information, and presents AI-generated results.
+- **FastAPI Backend:** Handles frontend requests, retrieves GitHub data, and coordinates AI analysis.
+- **GitHub REST API:** Provides public profile, repository, and file information.
+- **AI Analysis Service:** Uses LangChain and Google Gemini to generate repository summaries, identify technologies, explain project structure, and suggest improvements.
+- **Results Display:** Presents repository information and AI insights through the web interface.
+
 
 ## 📂 Project Structure
 
